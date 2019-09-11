@@ -1,0 +1,13 @@
+# Copyright (c) 2018 NTT Communications Corporation
+version: "2.0"
+name: "echo_action"
+runner_type: "python-script"
+description: "Print message to standard output."
+enabled: true
+entry_point: "my_echo_message.py"
+parameters:
+    message:
+        type: "string"
+        description: "Message to print."
+        required: true
+        position: 0
