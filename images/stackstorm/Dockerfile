@@ -9,6 +9,7 @@ COPY config/init-fake.conf /etc/init/fake-container-events.conf
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update \
     && apt-get install -y \
+      gettext-base \ 
       openssh-server \
       sudo \
       curl \

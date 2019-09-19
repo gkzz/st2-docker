@@ -3,6 +3,10 @@ version: '3'
 services:
   stackstorm:
     image: stackstorm/stackstorm:${ST2_IMAGE_TAG:-latest}
+    command: env
+    environment:
+      - HUBOT_ADAPTER=slack
+      - HUBOT_SLACK_TOKEN=$HUBOT_SLACK_TOKEN #xoxb-aaaa
     env_file:
       - conf/stackstorm.env
       - conf/mongo.env
